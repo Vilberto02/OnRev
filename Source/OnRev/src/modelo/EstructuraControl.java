@@ -24,4 +24,18 @@ public class EstructuraControl {
     public int getNivelAnidamiento(){
         return this.getNivelAnidamiento();
     }
+
+    public String getSintaxis() {
+        return sintaxis;
+    }
+
+    public void setSintaxis(String sintaxis) {
+        this.sintaxis = sintaxis;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
 }
