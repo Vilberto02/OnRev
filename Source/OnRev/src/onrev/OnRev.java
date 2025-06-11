@@ -6,7 +6,7 @@ package onrev;
 
 /**
  *
- * @author Giacomo
+ * @author Madrid Ruiz, Giacomo; Pardavé Jara, Asthri; Patricio Julca, Vilberto; Guzmán Romero, Diego; Segura Pacherres, Leonardo.
  */
 public class OnRev {
 
@@ -15,6 +15,7 @@ public class OnRev {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("Miau");
     }
     
 }

@@ -9,5 +9,22 @@ package modelo;
  * @author Giacomo
  */
 public class Analizador {
+    private Pseudocodigo pseudo;
+    private String complejiadAsintotica;
+    
+    
+    // ******************************* Métodos *********************************
+    
+    public String calcularComplejidad(){
+        this.complejiadAsintotica = "";
+        //TO DO
+        
+        return complejiadAsintotica;
+    }
+    
+    public FuncionTiempo generarFuncionTiempo(){
+        //TO DO
+        return null;
+    }
     
 }
