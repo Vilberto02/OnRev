@@ -4,6 +4,10 @@
  */
 package vista;
 
+import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 /**
  *
  * @author Usuario
@@ -121,7 +125,13 @@ public class home extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        try {
+            UIManager.setLookAndFeel( new FlatLightLaf() );
+        } catch( UnsupportedLookAndFeelException ex ) {
+            System.err.println( "Failed to initialize LaF" );
+        }
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
