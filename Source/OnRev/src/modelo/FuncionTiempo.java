@@ -4,7 +4,8 @@
  */
 package modelo;
 
-import com.itextpdf.awt.geom.Point;
+//import com.itextpdf.awt.geom.Point;
+import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
