@@ -16,8 +16,6 @@ public class EstructuraControl {
     public EstructuraControl(String str, int n){
         this.nombre = str;
         this.nivelAnidamiento = n;
-        
-    
     }
     
     // ******************************* Métodos *********************************
@@ -35,7 +33,5 @@ public class EstructuraControl {
 
     public String getNombre() {
         return nombre;
-    }
-    
-    
+    } 
 }
