@@ -48,16 +48,14 @@ public class frmAnalizador extends javax.swing.JFrame {
         panCuerpoGrafica = new javax.swing.JPanel();
         panPieGrafica = new javax.swing.JPanel();
         panComplejidad = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblComplejidad = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         panFuncion = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblTiempo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
-
-        pnaFondo.setBackground(null);
 
         panTitulo.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -127,9 +125,8 @@ public class frmAnalizador extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                .addComponent(lblIcono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(lblIcono, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panBotones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         panPseudocodigo.setBackground(java.awt.Color.white);
@@ -217,10 +214,7 @@ public class frmAnalizador extends javax.swing.JFrame {
             panPseudocodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panTituloPseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panCuerpoPseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panPseudocodigoLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(panPiePseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(panPiePseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panPseudocodigoLayout.setVerticalGroup(
             panPseudocodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,9 +249,9 @@ public class frmAnalizador extends javax.swing.JFrame {
 
         panComplejidad.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("O(n)");
+        lblComplejidad.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblComplejidad.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblComplejidad.setText("O(n)");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -268,7 +262,7 @@ public class frmAnalizador extends javax.swing.JFrame {
         panComplejidadLayout.setHorizontalGroup(
             panComplejidadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblComplejidad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panComplejidadLayout.setVerticalGroup(
             panComplejidadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,7 +270,7 @@ public class frmAnalizador extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(lblComplejidad)
                 .addGap(37, 37, 37))
         );
 
@@ -286,16 +280,16 @@ public class frmAnalizador extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Función de tiempo");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("f(t)");
+        lblTiempo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTiempo.setText("f(t)");
 
         javax.swing.GroupLayout panFuncionLayout = new javax.swing.GroupLayout(panFuncion);
         panFuncion.setLayout(panFuncionLayout);
         panFuncionLayout.setHorizontalGroup(
             panFuncionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblTiempo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panFuncionLayout.setVerticalGroup(
             panFuncionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,7 +297,7 @@ public class frmAnalizador extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addComponent(lblTiempo)
                 .addGap(37, 37, 37))
         );
 
@@ -359,10 +353,7 @@ public class frmAnalizador extends javax.swing.JFrame {
         panCuerpoLayout.setVerticalGroup(
             panCuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panCuerpoLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(panPseudocodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(panPseudocodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout pnaFondoLayout = new javax.swing.GroupLayout(pnaFondo);
@@ -443,19 +434,19 @@ public class frmAnalizador extends javax.swing.JFrame {
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JButton btnVerificar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel lblComplejidad;
     public javax.swing.JLabel lblIcono;
     private javax.swing.JLabel lblPseudoTitulo;
+    public javax.swing.JLabel lblTiempo;
     public javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel panBotones;
     private javax.swing.JPanel panComplejidad;
     private javax.swing.JPanel panCuerpo;
-    private javax.swing.JPanel panCuerpoGrafica;
+    public javax.swing.JPanel panCuerpoGrafica;
     private javax.swing.JPanel panCuerpoPseudo;
     private javax.swing.JPanel panFuncion;
     private javax.swing.JPanel panGrafica;
