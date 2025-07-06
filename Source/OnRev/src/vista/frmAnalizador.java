@@ -1,17 +1,17 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
 
 /**
  *
- * @author Usuario
+ * @author Giacomo
  */
-public class frmAnalizador extends javax.swing.JPanel {
+public class frmAnalizador extends javax.swing.JFrame {
 
     /**
-     * Creates new form analizador
+     * Creates new form frmAnalizador1
      */
     public frmAnalizador() {
         initComponents();
@@ -26,32 +26,49 @@ public class frmAnalizador extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelNavbar = new javax.swing.JPanel();
+        pnaFondo = new javax.swing.JPanel();
+        panTitulo = new javax.swing.JPanel();
+        lblIcono = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        panBotones = new javax.swing.JPanel();
         btnExportar = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
-        lblTituloAnalizador = new javax.swing.JLabel();
-        lblLogo = new javax.swing.JLabel();
-        panelCodigo = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        panCuerpo = new javax.swing.JPanel();
+        panPseudocodigo = new javax.swing.JPanel();
+        panTituloPseudo = new javax.swing.JPanel();
+        lblPseudoTitulo = new javax.swing.JLabel();
+        panCuerpoPseudo = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        inputCodigo = new javax.swing.JTextArea();
+        txtPseudocodigo = new javax.swing.JTextArea();
+        panPiePseudo = new javax.swing.JPanel();
         btnLimpiar = new javax.swing.JButton();
         btnVerificar = new javax.swing.JButton();
-        panelResultados = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        panGrafica = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        panCuerpoGrafica = new javax.swing.JPanel();
+        panPieGrafica = new javax.swing.JPanel();
+        panComplejidad = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        panFuncion = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelNavbar.setBackground(new java.awt.Color(255, 255, 255));
-        panelNavbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnaFondo.setBackground(null);
+
+        panTitulo.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblIcono.setMaximumSize(new java.awt.Dimension(40, 40));
+        lblIcono.setMinimumSize(new java.awt.Dimension(40, 40));
+        lblIcono.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setText("Analizador");
+
+        panBotones.setBackground(new java.awt.Color(255, 255, 255));
 
         btnExportar.setBackground(new java.awt.Color(0, 54, 105));
         btnExportar.setForeground(new java.awt.Color(255, 255, 255));
@@ -61,7 +78,6 @@ public class frmAnalizador extends javax.swing.JPanel {
                 btnExportarActionPerformed(evt);
             }
         });
-        panelNavbar.add(btnExportar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 20, 120, 30));
 
         btnRegresar.setText("Ir a inicio");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
@@ -69,125 +85,383 @@ public class frmAnalizador extends javax.swing.JPanel {
                 btnRegresarActionPerformed(evt);
             }
         });
-        panelNavbar.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 20, 110, 30));
 
-        lblTituloAnalizador.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        lblTituloAnalizador.setForeground(new java.awt.Color(102, 102, 102));
-        lblTituloAnalizador.setText("Analizador");
-        panelNavbar.add(lblTituloAnalizador, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, -1));
+        javax.swing.GroupLayout panBotonesLayout = new javax.swing.GroupLayout(panBotones);
+        panBotones.setLayout(panBotonesLayout);
+        panBotonesLayout.setHorizontalGroup(
+            panBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panBotonesLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(btnExportar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8))
+        );
+        panBotonesLayout.setVerticalGroup(
+            panBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panBotonesLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addGroup(panBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnExportar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8))
+        );
 
-        lblLogo.setText("Logo_OnRev");
-        panelNavbar.add(lblLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+        javax.swing.GroupLayout panTituloLayout = new javax.swing.GroupLayout(panTitulo);
+        panTitulo.setLayout(panTituloLayout);
+        panTituloLayout.setHorizontalGroup(
+            panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panTituloLayout.createSequentialGroup()
+                .addComponent(lblIcono, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panTituloLayout.setVerticalGroup(
+            panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panTituloLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTitulo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(lblIcono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        add(panelNavbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 70));
+        panPseudocodigo.setBackground(java.awt.Color.white);
 
-        panelCodigo.setBackground(new java.awt.Color(255, 255, 255));
-        panelCodigo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panTituloPseudo.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel1.setText("Pseudocódigo");
-        panelCodigo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
+        lblPseudoTitulo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblPseudoTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPseudoTitulo.setText("Pseudocódigo");
 
-        inputCodigo.setColumns(20);
-        inputCodigo.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
-        inputCodigo.setRows(5);
-        inputCodigo.setTabSize(2);
-        inputCodigo.setText("Coloca tu algoritmo oLoop");
-        jScrollPane1.setViewportView(inputCodigo);
+        javax.swing.GroupLayout panTituloPseudoLayout = new javax.swing.GroupLayout(panTituloPseudo);
+        panTituloPseudo.setLayout(panTituloPseudoLayout);
+        panTituloPseudoLayout.setHorizontalGroup(
+            panTituloPseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblPseudoTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panTituloPseudoLayout.setVerticalGroup(
+            panTituloPseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panTituloPseudoLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(lblPseudoTitulo)
+                .addGap(8, 8, 8))
+        );
 
-        panelCodigo.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 300, 500));
+        panCuerpoPseudo.setBackground(new java.awt.Color(255, 255, 255));
+
+        txtPseudocodigo.setColumns(20);
+        txtPseudocodigo.setRows(5);
+        jScrollPane1.setViewportView(txtPseudocodigo);
+
+        javax.swing.GroupLayout panCuerpoPseudoLayout = new javax.swing.GroupLayout(panCuerpoPseudo);
+        panCuerpoPseudo.setLayout(panCuerpoPseudoLayout);
+        panCuerpoPseudoLayout.setHorizontalGroup(
+            panCuerpoPseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCuerpoPseudoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panCuerpoPseudoLayout.setVerticalGroup(
+            panCuerpoPseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCuerpoPseudoLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panPiePseudo.setBackground(new java.awt.Color(255, 255, 255));
 
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLimpiar.setForeground(new java.awt.Color(0, 54, 105));
         btnLimpiar.setText("Limpiar");
         btnLimpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 54, 105), 1, true));
-        panelCodigo.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 300, 40));
 
         btnVerificar.setBackground(new java.awt.Color(0, 54, 105));
         btnVerificar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnVerificar.setForeground(new java.awt.Color(255, 255, 255));
         btnVerificar.setText("Verificar");
         btnVerificar.setBorder(null);
-        panelCodigo.add(btnVerificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, 300, 40));
 
-        add(panelCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 360, 700));
-
-        panelResultados.setBackground(new java.awt.Color(255, 255, 255));
-        panelResultados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Aún no se procesa ningún algoritmo.");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(387, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(297, 297, 297))
+        javax.swing.GroupLayout panPiePseudoLayout = new javax.swing.GroupLayout(panPiePseudo);
+        panPiePseudo.setLayout(panPiePseudoLayout);
+        panPiePseudoLayout.setHorizontalGroup(
+            panPiePseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPiePseudoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panPiePseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnVerificar, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(237, 237, 237)
-                .addComponent(jLabel3)
-                .addContainerGap(243, Short.MAX_VALUE))
+        panPiePseudoLayout.setVerticalGroup(
+            panPiePseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPiePseudoLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(btnVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
         );
 
-        panelResultados.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 930, 500));
+        javax.swing.GroupLayout panPseudocodigoLayout = new javax.swing.GroupLayout(panPseudocodigo);
+        panPseudocodigo.setLayout(panPseudocodigoLayout);
+        panPseudocodigoLayout.setHorizontalGroup(
+            panPseudocodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panTituloPseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panCuerpoPseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panPseudocodigoLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panPiePseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
+        );
+        panPseudocodigoLayout.setVerticalGroup(
+            panPseudocodigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPseudocodigoLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panTituloPseudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panCuerpoPseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(panPiePseudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+
+        panGrafica.setBackground(java.awt.Color.white);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Gráfica de la función de tiempo teórica");
-        panelResultados.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel4.setText("Función de tiempo");
-        panelResultados.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 570, -1, -1));
+        panCuerpoGrafica.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel5.setText("Complejidad Algoritmica");
-        panelResultados.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, -1, -1));
+        javax.swing.GroupLayout panCuerpoGraficaLayout = new javax.swing.GroupLayout(panCuerpoGrafica);
+        panCuerpoGrafica.setLayout(panCuerpoGraficaLayout);
+        panCuerpoGraficaLayout.setHorizontalGroup(
+            panCuerpoGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panCuerpoGraficaLayout.setVerticalGroup(
+            panCuerpoGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setText("ns");
-        panelResultados.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, -1));
+        panComplejidad.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel7.setText("ns");
-        panelResultados.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 610, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("O(n)");
 
-        add(panelResultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 1010, 700));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Complejidad Algorítmica");
+
+        javax.swing.GroupLayout panComplejidadLayout = new javax.swing.GroupLayout(panComplejidad);
+        panComplejidad.setLayout(panComplejidadLayout);
+        panComplejidadLayout.setHorizontalGroup(
+            panComplejidadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panComplejidadLayout.setVerticalGroup(
+            panComplejidadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panComplejidadLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addGap(37, 37, 37))
+        );
+
+        panFuncion.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Función de tiempo");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("f(t)");
+
+        javax.swing.GroupLayout panFuncionLayout = new javax.swing.GroupLayout(panFuncion);
+        panFuncion.setLayout(panFuncionLayout);
+        panFuncionLayout.setHorizontalGroup(
+            panFuncionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panFuncionLayout.setVerticalGroup(
+            panFuncionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panFuncionLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addGap(37, 37, 37))
+        );
+
+        javax.swing.GroupLayout panPieGraficaLayout = new javax.swing.GroupLayout(panPieGrafica);
+        panPieGrafica.setLayout(panPieGraficaLayout);
+        panPieGraficaLayout.setHorizontalGroup(
+            panPieGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPieGraficaLayout.createSequentialGroup()
+                .addComponent(panComplejidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(panFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        panPieGraficaLayout.setVerticalGroup(
+            panPieGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPieGraficaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(panPieGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panComplejidad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panFuncion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        javax.swing.GroupLayout panGraficaLayout = new javax.swing.GroupLayout(panGrafica);
+        panGrafica.setLayout(panGraficaLayout);
+        panGraficaLayout.setHorizontalGroup(
+            panGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panGraficaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(panCuerpoGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panPieGrafica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panGraficaLayout.setVerticalGroup(
+            panGraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panGraficaLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(jLabel2)
+                .addGap(8, 8, 8)
+                .addComponent(panCuerpoGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(panPieGrafica, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+
+        javax.swing.GroupLayout panCuerpoLayout = new javax.swing.GroupLayout(panCuerpo);
+        panCuerpo.setLayout(panCuerpoLayout);
+        panCuerpoLayout.setHorizontalGroup(
+            panCuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCuerpoLayout.createSequentialGroup()
+                .addComponent(panPseudocodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panCuerpoLayout.setVerticalGroup(
+            panCuerpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panGrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panCuerpoLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(panPseudocodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
+        );
+
+        javax.swing.GroupLayout pnaFondoLayout = new javax.swing.GroupLayout(pnaFondo);
+        pnaFondo.setLayout(pnaFondoLayout);
+        pnaFondoLayout.setHorizontalGroup(
+            pnaFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panCuerpo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnaFondoLayout.setVerticalGroup(
+            pnaFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnaFondoLayout.createSequentialGroup()
+                .addComponent(panTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(panCuerpo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnaFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnaFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegresarActionPerformed
 
     private void btnExportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnExportarActionPerformed
 
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegresarActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(frmAnalizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(frmAnalizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(frmAnalizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(frmAnalizador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new frmAnalizador().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnExportar;
-    private javax.swing.JButton btnLimpiar;
-    private javax.swing.JButton btnRegresar;
-    private javax.swing.JButton btnVerificar;
-    private javax.swing.JTextArea inputCodigo;
+    public javax.swing.JButton btnExportar;
+    public javax.swing.JButton btnLimpiar;
+    public javax.swing.JButton btnRegresar;
+    public javax.swing.JButton btnVerificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblLogo;
-    private javax.swing.JLabel lblTituloAnalizador;
-    private javax.swing.JPanel panelCodigo;
-    private javax.swing.JPanel panelNavbar;
-    private javax.swing.JPanel panelResultados;
+    public javax.swing.JLabel lblIcono;
+    private javax.swing.JLabel lblPseudoTitulo;
+    public javax.swing.JLabel lblTitulo;
+    private javax.swing.JPanel panBotones;
+    private javax.swing.JPanel panComplejidad;
+    private javax.swing.JPanel panCuerpo;
+    private javax.swing.JPanel panCuerpoGrafica;
+    private javax.swing.JPanel panCuerpoPseudo;
+    private javax.swing.JPanel panFuncion;
+    private javax.swing.JPanel panGrafica;
+    private javax.swing.JPanel panPieGrafica;
+    private javax.swing.JPanel panPiePseudo;
+    private javax.swing.JPanel panPseudocodigo;
+    private javax.swing.JPanel panTitulo;
+    private javax.swing.JPanel panTituloPseudo;
+    private javax.swing.JPanel pnaFondo;
+    public javax.swing.JTextArea txtPseudocodigo;
     // End of variables declaration//GEN-END:variables
 }
