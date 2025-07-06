@@ -10,14 +10,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
-import vista.frmAnalizador;
+import vista.frmComparador;
 
 /**
  *
  * @author Giacomo
  */
-public class ControladorAnalizador {
-    protected frmAnalizador vista;    
+public class ControladorComparador {
+    protected frmComparador vista;    
     private ControladorHome vistaHome;
     
     private int posicionX;
@@ -25,7 +25,7 @@ public class ControladorAnalizador {
     
     
     
-    public ControladorAnalizador(frmAnalizador vista, ControladorHome vistaHome){
+    public ControladorComparador(frmComparador vista, ControladorHome vistaHome){
         this.vista = vista;
         this.vistaHome = vistaHome;
         
@@ -68,7 +68,6 @@ public class ControladorAnalizador {
             }
         });
         
-        
         this.vista.btnRegresar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -90,5 +89,4 @@ public class ControladorAnalizador {
     public void limpiarComponentes(){
         this.vista.txtPseudocodigo.setText("");
     }
-    
 }

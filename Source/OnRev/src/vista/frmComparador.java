@@ -43,6 +43,7 @@ public class frmComparador extends javax.swing.JFrame {
         cboxAlgoritmosPredefinidos = new javax.swing.JComboBox<>();
         panPiePseudo = new javax.swing.JPanel();
         btnComparar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         panGrafica = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         panCuerpoGrafica = new javax.swing.JPanel();
@@ -68,7 +69,7 @@ public class frmComparador extends javax.swing.JFrame {
 
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Analizador");
+        lblTitulo.setText("Comparador");
 
         panBotones.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -179,7 +180,7 @@ public class frmComparador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(cboxAlgoritmosPredefinidos, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -191,19 +192,28 @@ public class frmComparador extends javax.swing.JFrame {
         btnComparar.setText("Comparar");
         btnComparar.setBorder(null);
 
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(51, 0, 153));
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 0, 153), 1, true));
+
         javax.swing.GroupLayout panPiePseudoLayout = new javax.swing.GroupLayout(panPiePseudo);
         panPiePseudo.setLayout(panPiePseudoLayout);
         panPiePseudoLayout.setHorizontalGroup(
             panPiePseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panPiePseudoLayout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
-                .addComponent(btnComparar, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(panPiePseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnComparar, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         panPiePseudoLayout.setVerticalGroup(
             panPiePseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panPiePseudoLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panPiePseudoLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
                 .addComponent(btnComparar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5))
         );
@@ -223,9 +233,8 @@ public class frmComparador extends javax.swing.JFrame {
                 .addComponent(panTituloPseudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(panCuerpoPseudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0)
-                .addComponent(panPiePseudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panPiePseudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         panGrafica.setBackground(java.awt.Color.white);
@@ -486,6 +495,7 @@ public class frmComparador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnComparar;
     public javax.swing.JButton btnExportar;
+    public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> cboxAlgoritmosPredefinidos;
     private javax.swing.JLabel jLabel2;

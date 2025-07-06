@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import vista.frmAnalizador;
+import vista.frmComparador;
 import vista.frmHome;
 
 /**
@@ -13,10 +14,12 @@ import vista.frmHome;
 public class ControladorHome {
     protected frmHome vista;
     private ControladorAnalizador contAnalizador;
+    private ControladorComparador contComparador ;
     
     public ControladorHome(frmHome vista){
         this.vista = vista;
         this.contAnalizador = new ControladorAnalizador(new frmAnalizador(), this);
+        this.contComparador  = new ControladorComparador(new frmComparador(), this);
         
      
         this.vista.btnAnalizador.addActionListener(new ActionListener(){
@@ -26,7 +29,14 @@ public class ControladorHome {
                 vista.dispose();
             }
         });
-        
+
+        this.vista.btnComparador.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                contComparador.iniciar();
+                vista.dispose();
+            }
+        });
     }
     
     
