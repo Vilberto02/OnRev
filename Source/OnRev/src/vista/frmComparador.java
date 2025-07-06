@@ -8,12 +8,12 @@ package vista;
  *
  * @author Usuario
  */
-public class comparador extends javax.swing.JPanel {
+public class frmComparador extends javax.swing.JPanel {
 
     /**
      * Creates new form comparador
      */
-    public comparador() {
+    public frmComparador() {
         initComponents();
     }
 

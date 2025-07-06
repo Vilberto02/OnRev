@@ -8,12 +8,12 @@ package vista;
  *
  * @author Usuario
  */
-public class analizador extends javax.swing.JPanel {
+public class frmAnalizador extends javax.swing.JPanel {
 
     /**
      * Creates new form analizador
      */
-    public analizador() {
+    public frmAnalizador() {
         initComponents();
     }
 

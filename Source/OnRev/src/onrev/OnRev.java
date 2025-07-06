@@ -4,6 +4,9 @@
  */
 package onrev;
 
+import controlador.ControladorHome;
+import vista.frmHome;
+
 /**
  *
  * @author Madrid Ruiz, Giacomo; Pardavé Jara, Asthri; Patricio Julca, Vilberto; Guzmán Romero, Diego; Segura Pacherres, Leonardo.
@@ -14,8 +17,8 @@ public class OnRev {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Miau");
+        ControladorHome contHome = new ControladorHome(new frmHome());
+        contHome.iniciar();
         
     }
     
