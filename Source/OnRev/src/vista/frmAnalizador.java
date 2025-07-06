@@ -54,7 +54,8 @@ public class frmAnalizador extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
 
         pnaFondo.setBackground(null);
 
@@ -70,7 +71,7 @@ public class frmAnalizador extends javax.swing.JFrame {
 
         panBotones.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnExportar.setBackground(new java.awt.Color(0, 54, 105));
+        btnExportar.setBackground(new java.awt.Color(51, 0, 153));
         btnExportar.setForeground(new java.awt.Color(255, 255, 255));
         btnExportar.setText("Exportar");
         btnExportar.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +80,9 @@ public class frmAnalizador extends javax.swing.JFrame {
             }
         });
 
+        btnRegresar.setForeground(new java.awt.Color(51, 0, 153));
         btnRegresar.setText("Ir a inicio");
+        btnRegresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 0, 153)));
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegresarActionPerformed(evt);
@@ -170,18 +173,18 @@ public class frmAnalizador extends javax.swing.JFrame {
             panCuerpoPseudoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panCuerpoPseudoLayout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         panPiePseudo.setBackground(new java.awt.Color(255, 255, 255));
 
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnLimpiar.setForeground(new java.awt.Color(0, 54, 105));
+        btnLimpiar.setForeground(new java.awt.Color(51, 0, 153));
         btnLimpiar.setText("Limpiar");
-        btnLimpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 54, 105), 1, true));
+        btnLimpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 0, 153), 1, true));
 
-        btnVerificar.setBackground(new java.awt.Color(0, 54, 105));
+        btnVerificar.setBackground(new java.awt.Color(51, 0, 153));
         btnVerificar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnVerificar.setForeground(new java.awt.Color(255, 255, 255));
         btnVerificar.setText("Verificar");
@@ -459,7 +462,7 @@ public class frmAnalizador extends javax.swing.JFrame {
     private javax.swing.JPanel panPieGrafica;
     private javax.swing.JPanel panPiePseudo;
     private javax.swing.JPanel panPseudocodigo;
-    private javax.swing.JPanel panTitulo;
+    public javax.swing.JPanel panTitulo;
     private javax.swing.JPanel panTituloPseudo;
     private javax.swing.JPanel pnaFondo;
     public javax.swing.JTextArea txtPseudocodigo;
