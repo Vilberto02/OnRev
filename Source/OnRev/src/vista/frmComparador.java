@@ -4,10 +4,6 @@
  */
 package vista;
 
-/**
- *
- * @author Giacomo
- */
 public class frmComparador extends javax.swing.JFrame {
 
     /**

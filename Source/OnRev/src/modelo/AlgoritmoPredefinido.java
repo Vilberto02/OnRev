@@ -4,18 +4,10 @@
  */
 package modelo;
 
-/**
- *
- * @author Luis
- */
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-/**
- *
- * @author Giacomo
- */
 public class AlgoritmoPredefinido extends Pseudocodigo {
     private final String nombre = "BubbleSort";
     private Map<Integer, Long> tiemposReales = new HashMap<>();

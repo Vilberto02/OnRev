@@ -5,10 +5,6 @@ import java.util.List;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
-/**
- *
- * @author Giacomo
- */
 public class Pseudocodigo {
     private String contenido;
     private boolean valido;

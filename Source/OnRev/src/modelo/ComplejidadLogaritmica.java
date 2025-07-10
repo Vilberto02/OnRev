@@ -4,10 +4,6 @@
  */
 package modelo;
 
-/**
- *
- * @author Giacomo
- */
 public class ComplejidadLogaritmica extends Complejidad {
     @Override public Complejidad sumar(Complejidad otra) { 
         return this.maximo(otra); 

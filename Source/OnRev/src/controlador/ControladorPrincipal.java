@@ -6,10 +6,7 @@ import vista.frmAnalizador;
 import vista.frmComparador;
 import vista.frmPrincipal;
 
-/**
- *
- * @author Giacomo
- */
+
 public class ControladorPrincipal {
     protected frmPrincipal vista;
     private ControladorAnalizador contAnalizador;

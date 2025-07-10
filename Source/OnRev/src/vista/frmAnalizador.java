@@ -4,10 +4,6 @@
  */
 package vista;
 
-/**
- *
- * @author Giacomo
- */
 public class frmAnalizador extends javax.swing.JFrame {
 
     /**

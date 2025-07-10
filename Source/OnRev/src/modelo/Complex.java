@@ -3,10 +3,6 @@ package modelo;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- * @author Giacomo
- */
 public class Complex {
     private static Map<String, Double> peso;
     private static Map<Double, String> valor;

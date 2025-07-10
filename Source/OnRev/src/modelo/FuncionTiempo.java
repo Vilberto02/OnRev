@@ -3,10 +3,6 @@ package modelo;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author Giacomo
- */
 public class FuncionTiempo {
     private final Pseudocodigo pseudo;
     private Polinomio total;
@@ -24,7 +20,6 @@ public class FuncionTiempo {
         return "T(n) = " + total.toString();
     }
 
-    /** Versión recursiva muy parecida a Analizador. */
     private Polinomio analizarBloque(List<EstructuraControl> ecs, int nivel) {
         Polinomio suma = new Polinomio();
         // constante por operaciones básicas de cada línea fuera de bucles

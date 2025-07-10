@@ -7,10 +7,7 @@ package onrev;
 import controlador.ControladorPrincipal;
 import vista.frmPrincipal;
 
-/**
- *
- * @author Giacomo
- */
+
 public class OnRev {
 
     /**

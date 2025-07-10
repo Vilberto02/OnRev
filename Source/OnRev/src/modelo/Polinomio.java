@@ -8,10 +8,6 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 
-/**
- *
- * @author Luis
- */
 public class Polinomio {
     private final TreeMap<Integer, Integer> terminos = new TreeMap<>(Collections.reverseOrder());
 

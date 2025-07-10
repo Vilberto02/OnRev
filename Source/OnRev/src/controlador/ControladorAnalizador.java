@@ -10,10 +10,7 @@ import modelo.Graficador;
 import modelo.Pseudocodigo;
 import vista.frmAnalizador;
 
-/**
- *
- * @author Giacomo
- */
+
 public class ControladorAnalizador {
     protected frmAnalizador vista;    
     private ControladorPrincipal contPrincipal;

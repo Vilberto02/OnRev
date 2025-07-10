@@ -16,10 +16,7 @@ import modelo.Polinomio;
 import modelo.Pseudocodigo;
 import vista.frmComparador;
 
-/**
- *
- * @author Giacomo
- */
+
 public class ControladorComparador {
     protected frmComparador vista;    
     private ControladorPrincipal contPrincipal;

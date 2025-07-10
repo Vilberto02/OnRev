@@ -1,9 +1,5 @@
 package modelo;
 
-/**
- *
- * @author Giacomo
- */
 public class ComplejidadVariable extends Complejidad {
     @Override 
     public Complejidad sumar(Complejidad otra) { 

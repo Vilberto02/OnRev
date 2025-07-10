@@ -3,10 +3,6 @@ package modelo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- *
- * @author Giacomo
- */
 public class EstructuraControl {
     private String tipo;
     private String condicion;
@@ -17,7 +13,6 @@ public class EstructuraControl {
     private int nivelAnidamiento;
     private String cuerpo;
     
-    // Patrones mejorados
     private static final Pattern PATRON_PARA = Pattern.compile(
         "Para\\s+(\\w+)\\s+desde\\s+(\\d+)\\s+hasta\\s+(\\w+)\\s+hacer"
     );

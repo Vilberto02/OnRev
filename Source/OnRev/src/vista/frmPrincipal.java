@@ -4,10 +4,6 @@
  */
 package vista;
 
-/**
- *
- * @author Giacomo
- */
 public class frmPrincipal extends javax.swing.JFrame {
 
     /**
@@ -34,7 +30,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         btnComparador = new javax.swing.JButton();
         btnAnalizador = new javax.swing.JButton();
         panGitHub = new javax.swing.JPanel();
-        lblGitHub = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("O(n)Rev");
@@ -111,23 +106,15 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         panGitHub.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblGitHub.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        lblGitHub.setForeground(new java.awt.Color(51, 0, 153));
-        lblGitHub.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblGitHub.setText("https://github.com/GiacomoMadrid/OnRev");
-
         javax.swing.GroupLayout panGitHubLayout = new javax.swing.GroupLayout(panGitHub);
         panGitHub.setLayout(panGitHubLayout);
         panGitHubLayout.setHorizontalGroup(
             panGitHubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblGitHub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 652, Short.MAX_VALUE)
         );
         panGitHubLayout.setVerticalGroup(
             panGitHubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panGitHubLayout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(lblGitHub)
-                .addContainerGap())
+            .addGap(0, 31, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout panFondoLayout = new javax.swing.GroupLayout(panFondo);
@@ -213,7 +200,6 @@ public class frmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnComparador;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel lblGitHub;
     private javax.swing.JPanel panBotones;
     private javax.swing.JPanel panDescripcion;
     private javax.swing.JPanel panFondo;
