@@ -4,7 +4,7 @@ inicio Algoritmo
   Si (a < 10) entonces
     Para i desde 1 hasta n hacer
        Para j desde 1 hasta n hacer
-	 V[i][j] ← 0
+	  V[i] ← 0
        fPara
     fPara
   Sino
@@ -64,7 +64,7 @@ inicio Anidamiento
        Para k desde 1 hasta n hacer
 	 Para l desde 1 hasta n hacer
 	   Para m desde 1 hasta n hacer 
-	      V[i][j][k][l][m] ← 0
+	      V[i] ← 0
            fPara
          fPara
        fPara
