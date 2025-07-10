@@ -1,0 +1,73 @@
+Algoritmo de prueba:
+
+inicio Algoritmo
+  Si (a < 10) entonces
+    Para i desde 1 hasta n hacer
+       Para j desde 1 hasta n hacer
+	  V[i] ← 0
+       fPara
+    fPara
+  Sino
+    Para i desde 1 hasta n hacer
+      A[i] ← 0
+    fPara
+  fSi
+fin
+
+
+Estructura Para:
+
+inicio PruebaPara
+  Para i desde 1 hasta 10
+    V[i] ← 0
+  fPara
+fin
+
+
+
+Estructura Mientras:
+
+inicio PruebaMientras
+  a ← 1
+  Mientras (a < 10)
+    V[i] ← 0
+    a ← a + 1
+  fMientras
+fin
+
+
+Estructura Si:
+
+inicio PruebaSi
+  Si (a < 10) entonces
+    a ← 10
+  fSi
+fin
+
+
+Estructura Si-Sino:
+
+inicio PruebaSi
+  Si (a < 10) entonces
+    a ← 10
+  Sino
+    a ← a + 1
+  fSi
+fin
+
+
+Anidamiento O(n^5):
+
+inicio Anidamiento
+  Para i desde 1 hasta n hacer
+    Para j desde 1 hasta n hacer
+       Para k desde 1 hasta n hacer
+	 Para l desde 1 hasta n hacer
+	   Para m desde 1 hasta n hacer 
+	      V[i] ← 0
+           fPara
+         fPara
+       fPara
+     fPara
+  fPara
+fin
