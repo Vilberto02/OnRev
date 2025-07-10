@@ -1,5 +1,9 @@
 package modelo;
 
+/**
+ * 
+ * @author Giacomo
+ */
 public class ComplejidadNLogN extends Complejidad {
     @Override 
     public Complejidad sumar(Complejidad otra) { 

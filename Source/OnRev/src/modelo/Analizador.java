@@ -7,6 +7,10 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 
+ * @author Giacomo
+ */
 public class Analizador {
     private Pseudocodigo pseudo;
     private String complejidadAsintotica;

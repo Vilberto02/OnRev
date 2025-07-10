@@ -1,5 +1,9 @@
 package modelo;
 
+/**
+ * 
+ * @author AsthriPardave
+ */
 public class ComplejidadConstante extends Complejidad {
     private final int valor;
     

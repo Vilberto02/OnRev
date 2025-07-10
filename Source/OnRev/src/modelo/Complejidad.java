@@ -1,5 +1,9 @@
 package modelo;
 
+/**
+ * 
+ * @author Usuario
+ */
 public abstract class Complejidad {
     public abstract Complejidad sumar(Complejidad otra);
     public abstract Complejidad multiplicar(Complejidad otra);

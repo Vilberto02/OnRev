@@ -3,6 +3,10 @@ package modelo;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 
+ * @author Usuario
+ */
 public class FuncionTiempo {
     private final Pseudocodigo pseudo;
     private Polinomio total;

@@ -3,6 +3,10 @@ package modelo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 
+ * @author AsthriPardave
+ */
 public class EstructuraControl {
     private String tipo;
     private String condicion;

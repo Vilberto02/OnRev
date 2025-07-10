@@ -1,5 +1,9 @@
 package modelo;
 
+/**
+ * 
+ * @author Giacomo
+ */
 public class ComplejidadPotencia extends Complejidad {
     private final int exponente;
     ComplejidadPotencia(int exp) { 
