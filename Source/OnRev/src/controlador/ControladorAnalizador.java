@@ -1,15 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controlador;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import javax.swing.JOptionPane;
+import modelo.Analizador;
+import modelo.FuncionTiempo;
+import modelo.Graficador;
+import modelo.Pseudocodigo;
 import vista.frmAnalizador;
 
 /**
@@ -18,48 +16,37 @@ import vista.frmAnalizador;
  */
 public class ControladorAnalizador {
     protected frmAnalizador vista;    
-    private ControladorHome vistaHome;
-    
-    private int posicionX;
-    private int posicionY;
-    
-    
-    
-    public ControladorAnalizador(frmAnalizador vista, ControladorHome vistaHome){
+    private ControladorPrincipal contPrincipal;
+    public Analizador analizador;
+    public Pseudocodigo pseudo;
+    public FuncionTiempo funcionTiempo;
+            
+    public ControladorAnalizador(frmAnalizador vista, ControladorPrincipal cont){
         this.vista = vista;
-        this.vistaHome = vistaHome;
+        this.contPrincipal = cont;
         
         this.vista.btnRegresar.setBackground(Color.white);
         this.vista.btnLimpiar.setBackground(Color.white);
         
-        this.vista.panTitulo.addMouseMotionListener(new MouseMotionListener(){
+        
+        //******************** Barra de programa ***************************************
+        
+        this.vista.btnRegresar.addActionListener(new ActionListener(){
             @Override
-            public void mouseDragged(MouseEvent evt) {
-                vista.setLocation(evt.getXOnScreen()-posicionX,evt.getYOnScreen()-posicionY);
+            public void actionPerformed(ActionEvent e){
+                contPrincipal.iniciar();
+                vista.dispose();
             }
-
-            @Override
-            public void mouseMoved(MouseEvent evt) {                
-            }
-
         });
         
-        this.vista.panTitulo.addMouseListener(new MouseAdapter(){           
+        this.vista.btnExportar.addActionListener(new ActionListener(){
             @Override
-            public void mousePressed(MouseEvent evt) {
-                if(evt.getButton()==java.awt.event.MouseEvent.BUTTON1){
-                    posicionX = evt.getX();
-                    posicionY = evt.getY();
-                    vista.panTitulo.setBackground(new Color(240,240,240)); 
-                }    
+            public void actionPerformed(ActionEvent e){
+                // Convertir a pdf
             }
-            
-            @Override
-            public void mouseReleased(MouseEvent evt) {
-                vista.panTitulo.setBackground(Color.white);
-            }
-            
         });
+        
+        //************************** Botones ********************************** 
         
         this.vista.btnLimpiar.addActionListener(new ActionListener(){
             @Override
@@ -68,27 +55,55 @@ public class ControladorAnalizador {
             }
         });
         
-        
-        this.vista.btnRegresar.addActionListener(new ActionListener(){
+        this.vista.btnVerificar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                vistaHome.iniciar();
-                vista.dispose();
+                limpiarLabels();
+                analizarPseudocodigo();
+                
             }
-        });
+            
+        });         
         
-        
-    }
-    
+    }  
     
     
     public void iniciar(){
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
+        limpiarComponentes();
     }
     
     public void limpiarComponentes(){
         this.vista.txtPseudocodigo.setText("");
+        limpiarLabels();
+    }
+    
+    public void limpiarLabels(){
+        this.vista.lblComplejidad.setText(" ");
+        this.vista.lblTiempo.setText(" ");
+    }
+    
+    private void analizarPseudocodigo() {
+        String codigo = vista.txtPseudocodigo.getText();
+        pseudo = new Pseudocodigo(codigo);
+        
+        if (!pseudo.esValido()) {
+            JOptionPane.showMessageDialog(null, "Error de sintaxis en el pseudocódigo");
+            return;
+        }
+
+        analizador = new Analizador(pseudo);
+        String complejidad = analizador.calcularComplejidad();
+        funcionTiempo = new FuncionTiempo(pseudo);
+        String ft = funcionTiempo.calcular();
+
+        vista.lblComplejidad.setText(complejidad);
+        vista.lblTiempo.setText(ft);
+        
+        Graficador graficador = new Graficador();
+        graficador.setEscala(15); // Ajustar zoom
+        graficador.dibujar(vista.panCuerpoGrafica, funcionTiempo);
     }
     
 }

@@ -8,12 +8,12 @@ package vista;
  *
  * @author Giacomo
  */
-public class frmHome extends javax.swing.JFrame {
+public class frmPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form frmHome
      */
-    public frmHome() {
+    public frmPrincipal() {
         initComponents();
     }
 
@@ -114,7 +114,7 @@ public class frmHome extends javax.swing.JFrame {
         lblGitHub.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         lblGitHub.setForeground(new java.awt.Color(51, 0, 153));
         lblGitHub.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblGitHub.setText("https://github.com/Vilberto02/OnRev");
+        lblGitHub.setText("https://github.com/GiacomoMadrid/OnRev");
 
         javax.swing.GroupLayout panGitHubLayout = new javax.swing.GroupLayout(panGitHub);
         panGitHub.setLayout(panGitHubLayout);
@@ -142,6 +142,7 @@ public class frmHome extends javax.swing.JFrame {
             panFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panFondoLayout.createSequentialGroup()
                 .addComponent(panDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(panBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
                 .addComponent(panGitHub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -186,20 +187,23 @@ public class frmHome extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmHome().setVisible(true);
+                new frmPrincipal().setVisible(true);
             }
         });
     }

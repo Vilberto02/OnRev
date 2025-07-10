@@ -1,22 +1,21 @@
 package controlador;
 
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import vista.frmAnalizador;
 import vista.frmComparador;
-import vista.frmHome;
+import vista.frmPrincipal;
 
 /**
  *
  * @author Giacomo
  */
-public class ControladorHome {
-    protected frmHome vista;
+public class ControladorPrincipal {
+    protected frmPrincipal vista;
     private ControladorAnalizador contAnalizador;
     private ControladorComparador contComparador ;
     
-    public ControladorHome(frmHome vista){
+    public ControladorPrincipal(frmPrincipal vista){
         this.vista = vista;
         this.contAnalizador = new ControladorAnalizador(new frmAnalizador(), this);
         this.contComparador  = new ControladorComparador(new frmComparador(), this);

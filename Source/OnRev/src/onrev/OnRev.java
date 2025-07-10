@@ -4,12 +4,12 @@
  */
 package onrev;
 
-import controlador.ControladorHome;
-import vista.frmHome;
+import controlador.ControladorPrincipal;
+import vista.frmPrincipal;
 
 /**
  *
- * @author Madrid Ruiz, Giacomo; Pardavé Jara, Asthri; Patricio Julca, Vilberto; Guzmán Romero, Diego; Segura Pacherres, Leonardo.
+ * @author Giacomo
  */
 public class OnRev {
 
@@ -17,10 +17,8 @@ public class OnRev {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ControladorHome contHome = new ControladorHome(new frmHome());
-        contHome.iniciar();
-        
+        ControladorPrincipal contPrincipal = new ControladorPrincipal(new frmPrincipal());
+        contPrincipal.iniciar();
     }
     
-    // No, no entiendo nada, no sé por qué se tiene que hacer así 
 }
